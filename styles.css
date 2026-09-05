@@ -1,0 +1,396 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@400;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+body {
+  background-color: #f2f4f5;
+  color: #393b3d;
+  overflow-x: hidden;
+}
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 42px;
+  background-color: #dee1e3;
+  border: solid #c7cbce;
+  border-width: 0 0 1px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  z-index: 33;
+}
+header span {
+  font-size: 24px;
+}
+.logo {
+  width: 30px;
+  height: 30px;
+  margin-left: 13px;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+ul {
+  list-style: none;
+  display: flex;
+  margin-left: 30px;
+}
+ul li {
+  margin-right: 50px;
+  cursor: pointer;
+}
+
+.inputcontainer {
+  height: 28px;
+  width: 337px;
+  position: relative;
+  overflow: hidden;
+  z-index: 99;
+}
+
+.inputcontainer::before {
+  content: "";
+  width: 10%;
+  height: 4px;
+  top: 0px;
+  left: 7px;
+  background-color: #fff;
+  position: absolute;
+  z-index: 1;
+}
+.inputcontainer input {
+  height: 100%;
+  width: 100%;
+  background-color: hsla(0, 0%, 100%, 0.9);
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid rgba(57, 59, 61, 0.2);
+}
+.inputcontainer input::placeholder {
+  color: #bdbebe;
+  font-weight: 300;
+  font-size: 16px;
+  padding: 30px;
+}
+.inputcontainer .searchimg {
+  position: absolute;
+  top: -16px;
+  left: 6px;
+  width: 40px;
+}
+
+.herosection {
+  height: 100vh;
+  width: 100%;
+  margin-top: 60px;
+}
+.nav {
+  width: 970px;
+  height: 40px;
+  background-color: #fff;
+  margin: 67px auto 25px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+.nav::after {
+  content: "";
+  width: 323px;
+  height: 4px;
+  background-color: #393b3d;
+  position: absolute;
+  bottom: 0;
+  left: 33%;
+}
+.nav span {
+  width: 323px;
+  height: 100%;
+  text-align: center;
+  padding: 11px 0;
+  cursor: pointer;
+}
+.passes {
+  padding: 0px 190px;
+}
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+.boxes .box {
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+}
+.prizeimg {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+.prizeimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.rbxbox {
+  display: flex;
+  padding-left: 6px;
+  margin-top: 4px;
+}
+.rbxcon {
+  width: 16px;
+  height: 16px;
+  margin-left: 3px;
+}
+
+.box span {
+  padding-left: 6px;
+}
+
+.box button {
+  background-color: transparent;
+  outline: none;
+  color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  font-weight: 500;
+  padding: 9px;
+  font-size: 16px;
+  width: 90%;
+  margin: 5px auto;
+}
+h3 {
+  margin-bottom: 5px;
+}
+
+.box button:hover {
+  border-color: #393b3d;
+  color: #393b3d;
+}
+.overlay {
+  width: 100vw;
+  height: 100%;
+  background-color: #39363691;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.purshasebox {
+  position: relative;
+  width: 368px;
+  height: 330px;
+  border-radius: 8px;
+  background-color: #333436;
+  color: #e4e4e5;
+  text-align: center;
+  padding: 10px;
+}
+.succedebox {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 368px;
+  height: 140px;
+  border-radius: 8px;
+  background-color: #333436;
+  color: #e4e4e5;
+  text-align: center;
+  padding: 10px;
+  transition: 0.6s;
+}
+
+.succedebox::before {
+  content: "";
+  width: 90%;
+  height: 2px;
+  background-color: #756c6c8a;
+  position: absolute;
+  left: 15px;
+  top: 35px;
+}
+.purshasebox::before {
+  content: "";
+  width: 90%;
+  height: 2px;
+  background-color: #756c6c8a;
+  position: absolute;
+  left: 15px;
+  top: 44px;
+}
+.picPrize {
+  width: 100px;
+  height: 100px;
+  margin: 31px auto 0;
+}
+.purshasebox p {
+  font-size: 14px;
+  margin-top: 13px;
+  color: #b7b4b4;
+}
+
+.succedebox p {
+  font-size: 15px;
+  margin-top: 25px;
+  color: #b7b4b4;
+}
+.okey {
+  padding: 7px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  color: #5f5050;
+  width: 90%;
+  letter-spacing: 1px;
+  margin-top: 18px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+.btns {
+  margin-top: 15px;
+}
+.btns button {
+  width: 135px;
+  padding: 8px 0;
+  border-radius: 8px;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  border: 2px solid #756c6c8a;
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btns .buy {
+  color: #000;
+  background-color: #fff;
+  border: none;
+  height: 34px;
+}
+.btns .cancel {
+  color: #b7b4b4;
+  font-weight: 500;
+  height: 34px;
+}
+
+.inrobux {
+  width: 16px;
+  margin-bottom: -3px;
+}
+
+.pricebux {
+  width: 17px;
+  margin-bottom: -5px;
+  margin-right: 5px;
+}
+
+.friend {
+  width: 80%;
+  padding: 8px 5px;
+  background-color: hsla(0, 0%, 100%, 0.9);
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid rgba(57, 59, 61, 0.2);
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.bottom-list {
+  justify-content: center;
+  padding: 60px 0 60px;
+}
+
+@media (max-width: 1115px) {
+  .passes {
+    padding: 0px 80px;
+    display: flex;
+    flex-direction: column;
+  }
+  .boxes {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 882px) {
+  .passes {
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .boxes {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .passes {
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .boxes {
+    margin-top: 10px;
+  }
+
+  ul li {
+    margin-right: 39px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 360px) {
+  .passes {
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .boxes {
+    margin-top: 10px;
+  }
+  .boxes .box {
+    width: 130px;
+  }
+  .prizeimg {
+    width: 110px;
+  }
+}
+
+@media (max-width: 390px) {
+  .purshasebox {
+    width: 330px;
+    height: 300px;
+  }
+}
+@media (max-width: 415px) {
+  .succedebox {
+    width: 85%;
+  }
+}
+
+@media (max-width: 363px) {
+  .box span {
+    padding-left: 6px;
+    font-size: 14px;
+  }
+}
